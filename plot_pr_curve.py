@@ -7,10 +7,13 @@ import sys
 
 if len(sys.argv) < 2 or "-h" in sys.argv:
     print "Plot precision-recall curves."
+    print
     print "Usage: python plot_pr_curve.py [-h] [-f OUTFILE] FILE [FILE ...]"
+    print
     print "Options:"
     print "-h Show this help message."
     print "-f FILENAME Save the figure to specified file."
+    print
     print "Pass multiple files to plot all the runs in the same plot."
 
 if "-h" in sys.argv:
