@@ -5,25 +5,30 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sys
 
-if len(sys.argv) < 2 or "-h" in sys.argv:
+def usage():
     print "Plot precision-recall curves."
     print
     print "Usage: python plot_pr_curve.py [-h] [-f OUTFILE] FILE [FILE ...]"
     print
     print "Options:"
-    print "-h Show this help message."
+    print "-h Show this help message and exit."
     print "-f FILENAME Save the figure to specified file."
     print
     print "Pass multiple files to plot all the runs in the same plot."
 
 if "-h" in sys.argv:
-    sys.argv.remove("-h")
+    usage()
+    sys.exit()
 
 outfile = 'pr_curve.pdf'
 if "-f" in sys.argv:
     idx = sys.argv.index("-f")
     outfile = sys.argv[idx+1]
     del sys.argv[idx:idx+2]
+
+if len(sys.argv) < 2:
+    usage()
+    sys.exit()
 
 resultlist = [EvaluationResult(f) for f in sys.argv[1:]]
 

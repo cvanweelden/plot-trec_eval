@@ -12,17 +12,15 @@ def usage():
     print "Usage: python plot_pr_curve.py [-h] [-f OUTFILE] FILE1 FILE2"
     print
     print "Options:"
-    print "-h Show this help message."
+    print "-h Show this help message and exit."
     print "-f FILENAME Save the figure to specified file."
     print "-s Sort the topics in descending difference."
     print
     print "The plotted difference is FILE1 - FILE2."
 
-if len(sys.argv) < 3 or "-h" in sys.argv:
-    usage()
-
 if "-h" in sys.argv:
-    sys.argv.remove("-h")
+    usage()
+    sys.exit()
 
 outfile = 'topic_difference.pdf'
 if "-f" in sys.argv:
