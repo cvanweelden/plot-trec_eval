@@ -9,7 +9,7 @@ import sys
 def usage():
     print "Plot per-topic difference in AP for 2 runs."
     print 
-    print "Usage: python plot_pr_curve.py [-h] [-f OUTFILE] FILE1 FILE2"
+    print "Usage: python plot_topic_difference.py [-h] [-f OUTFILE] FILE1 FILE2"
     print
     print "Options:"
     print "-h Show this help message and exit."
