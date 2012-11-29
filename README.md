@@ -21,18 +21,18 @@ Pass multiple files to plot all the runs in the same plot.
 
 `$ python plot_pr_curve -f pr_curve.pdf indri.eval okapi.eval`
 
-### Per-topic AP difference
+### Per-topic AP or AP difference
 
-Plot per-topic difference in AP for 2 runs.
+Plot AP per topic for 1 run or per-topic difference for 2 runs.
 
-Usage: `python plot_topic_difference.py [-h] [-f OUTFILE] FILE1 FILE2`
+Usage: `python plot_topic_difference.py [-h] [-f OUTFILE] FILE1 [FILE2]`
 
 Options:   
 `-h` Show this help message and exit.   
 `-f FILENAME` Save the figure to specified file.   
-`-s` Sort the topics in descending difference.   
+`-s` Sort the topics in descending AP/difference.   
 
-The plotted difference is FILE1 - FILE2.
+When passing two files the plotted difference is FILE1 - FILE2.
 
 #### Example
 
